@@ -1,0 +1,51 @@
+ 
+<table class="table"  >
+    <thead >
+     
+    
+    </thead>
+    <tbody>
+
+ 
+            
+        <tr>
+       
+            <td scope="col">Name </td>
+            <td>
+                <!-- <a [routerLink]="['/items',item.id]">  
+                    {{item.name| uppercase}} 
+                </a> -->
+    
+                <input type="text" class="form-control"   [(ngModel)]='item.name' >
+            </td>
+        <tr>
+            <td scope="col">Desciption</td>
+            <td><input type="text" class="form-control"   [(ngModel)]='item.description' ></td>
+            
+             
+        </tr>
+    
+        <tr>
+            <td scope="col">Quantity</td>
+            <td> <input type="text" class="form-control"   [(ngModel)]='item.quantity' ></td>
+           
+             
+        </tr>   
+        <tr>
+            <td scope="col">ID</td>
+            <td>{{item._id}}</td>
+        </tr>
+        <tr>
+            <td scope="col">V</td> 
+            <td>{{item.__v}}</td>
+        </tr>
+        
+      
+    </tbody>
+  </table>
+
+
+  <button type="submit" (click)='updateItem()' class="btn btn-primary">Update</button>
+  <!-- <tr *ngFor="let item of filterItems"> -->
+
+
