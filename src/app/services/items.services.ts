@@ -4,7 +4,8 @@ import {Observable} from 'rxjs'
 
 import {catchError, tap} from 'rxjs/operators'
 import {IItems} from '../shared/interfaces/Iitems'
-
+import { Component } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -12,16 +13,19 @@ import {IItems} from '../shared/interfaces/Iitems'
 export class ItemService {
    
     constructor (private  _httpClient: HttpClient) {
+        console.log(environment.production); // Logs false for default environment
     }
 
- 
+    URL=environment.apiUrl;
 
     getItems(id?: string):Observable<any>{
 
-        let URL='http://localhost:8080/items/items';
+       // let URL='http://localhost:8080/items/items';
+       let URL = this.URL;
 
         if(id ){
             //URL="http://localhost:3000/products/"+id;
+           
             console.log("COntructing URL with ID "+id);
             URL += `/${id}`;
           }
@@ -33,7 +37,9 @@ export class ItemService {
     }
     
     updateItem(item: IItems) {
-        let URL='http://localhost:8080/items/items/'+item.id;
+        //let URL='http://localhost:8080/items/items/'+item.id;
+        let URL = this.URL+item.id;
+
         console.log('UPDATE IN SERVICE  '+item.name);
         console.log('UPDATE IN SERVICE  '+item.description);
         console.log('UPDATE IN SERVICE  '+item.quantity);
@@ -47,7 +53,8 @@ export class ItemService {
     }
   
     createItems(item: IItems) {
-        let URL='http://localhost:8080/items/items';
+       //let URL='http://localhost:8080/items/items';
+       let URL = this.URL;
         console.log('UPDATE IN SERVICE  '+item.name);
         console.log('UPDATE IN SERVICE  '+item.description);
         console.log('UPDATE IN SERVICE  '+item.quantity);
@@ -61,8 +68,8 @@ export class ItemService {
     }
 
     deleteItem(item: IItems) {
-        let URL='http://localhost:8080/items/items/'+item.id;
-         
+        //let URL='http://localhost:8080/items/items/'+item.id;
+        let URL = this.URL+item.id;
         console.log('UPDATE IN SERVICE  '+URL);
 
         return this._httpClient.delete(URL).pipe(catchError(this.handleError));
