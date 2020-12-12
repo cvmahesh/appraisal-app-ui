@@ -29,3 +29,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #### AWS
 ng serve  --port 4202 --host 0.0.0.0 --publicHost ec2-18-222-151-80.us-east-2.compute.amazonaws.com
+
+
+
+  189  ps -ef | grep 'nginx'
+  190  sudo systemctl stop nginx
+  191  ps -ef | grep 'nginx'
+  192  sudo systemctl stop nginx
+  193  ps -ef | grep 'nginx'
+  194  kill -9 1257 1258
+  195  ps -ef | grep 'nginx'
+  196  sudo systemctl stop nginx
+  197  ps -ef | grep 'nginx'
+  198  sudo kill -9 1257 1258 
+  199  ps -ef | grep 'nginx'
+  200  nginx
+  201  sudo nginx
