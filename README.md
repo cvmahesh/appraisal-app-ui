@@ -54,3 +54,7 @@ https://ahamilton-eval-test.apigee.net/getstarted
 
 
 https://rush2cvmahesh-eval-test.apigee.net/getstarted
+
+
+BUILD for envionment wise 
+https://angular.io/guide/build

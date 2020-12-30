@@ -38,7 +38,7 @@ export class ItemService {
     
     updateItem(item: IItems) {
         //let URL='http://localhost:8080/items/items/'+item.id;
-        let URL = this.URL+item.id;
+        let URL = this.URL+'/'+item.id;
 
         console.log('UPDATE IN SERVICE  '+item.name);
         console.log('UPDATE IN SERVICE  '+item.description);
