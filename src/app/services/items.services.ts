@@ -22,7 +22,7 @@ export class ItemService {
 
        // let URL='http://localhost:8080/items/items';
        let URL = this.URL;
-
+       console.log('getItems IN SERVICE URL:  '+URL);
         if(id ){
             //URL="http://localhost:3000/products/"+id;
            
@@ -43,7 +43,7 @@ export class ItemService {
         console.log('UPDATE IN SERVICE  '+item.name);
         console.log('UPDATE IN SERVICE  '+item.description);
         console.log('UPDATE IN SERVICE  '+item.quantity);
-        console.log('UPDATE IN SERVICE  '+URL);
+        console.log('UPDATE IN SERVICE URL:  '+URL);
 
         return this._httpClient.put(URL,{
             "name": item.name,
@@ -58,7 +58,7 @@ export class ItemService {
         console.log('UPDATE IN SERVICE  '+item.name);
         console.log('UPDATE IN SERVICE  '+item.description);
         console.log('UPDATE IN SERVICE  '+item.quantity);
-        console.log('UPDATE IN SERVICE  '+URL);
+        console.log('createItems IN SERVICE  URL: '+URL);
 
         return this._httpClient.post(URL,{
             "name": item.name,
@@ -70,7 +70,7 @@ export class ItemService {
     deleteItem(item: IItems) {
         //let URL='http://localhost:8080/items/items/'+item.id;
         let URL = this.URL+item.id;
-        console.log('UPDATE IN SERVICE  '+URL);
+        console.log('deleteItem IN SERVICE URL:  '+URL);
 
         return this._httpClient.delete(URL).pipe(catchError(this.handleError));
     }

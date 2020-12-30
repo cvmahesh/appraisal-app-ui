@@ -4,8 +4,8 @@ import { ItemsComponent } from './items/items.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 const routes: Routes = [
-  {path: 'items',component: ItemsComponent },
-  {path: 'items/:id', component : ItemDetailComponent},
+  {path: 'items-app',component: ItemsComponent },
+  {path: 'items-app/:id', component : ItemDetailComponent},
 ];
 
  

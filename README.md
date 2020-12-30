@@ -45,3 +45,12 @@ ng serve  --port 4202 --host 0.0.0.0 --publicHost ec2-18-222-151-80.us-east-2.co
   199  ps -ef | grep 'nginx'
   200  nginx
   201  sudo nginx
+
+
+## apigee
+
+API Management has been activated for rush2cvmahesh-eval on Apigee Edge
+https://ahamilton-eval-test.apigee.net/getstarted
+
+
+https://rush2cvmahesh-eval-test.apigee.net/getstarted
